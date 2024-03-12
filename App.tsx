@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Olá Mundo!</Text>
+      <Text style={styles.field}>Nome: </Text>
+      <TextInput style={styles.txtField}/>
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +14,24 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+    backgroundColor: '#ADD8E6',
+    //alignItems: 'center',
     justifyContent: 'center',
+    paddingHorizontal: 10,
   },
+
+  field:{
+    color:'#fff',
+    fontSize: 25,
+  },
+
+  txtField:{
+    backgroundColor: '#363636',
+    width: 'auto',
+    borderRadius: 10,
+    padding: 10,
+    marginTop: 10,
+    
+  }
+
 });
